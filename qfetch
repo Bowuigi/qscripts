@@ -1,0 +1,14 @@
+#!/bin/sh
+usedcolor="\033[1;36m"
+secondusedcolor="\033[1;31m"
+normalcolor="\033[0m"
+ramswap=$(free -ht --si | awk '/Total/{print $3 "/" $2}')
+usedshell=$(echo "$SHELL" | awk -F "/" '{print $NF}')
+
+echo "$secondusedcolor$(whoami)@$(hostname)$usedcolor"
+echo "RAM+Swap: $normalcolor              $ramswap $usedcolor"
+echo "$(uname -s) Kernel Version: $normalcolor  $(uname -r) $usedcolor"
+echo "Base operating system: $normalcolor $(uname -o) $usedcolor"
+echo "Architecture: $normalcolor          $(uname -m) $usedcolor"
+echo "Editor: $normalcolor                $EDITOR $usedcolor"
+echo "Terminal: $normalcolor              $TERM"

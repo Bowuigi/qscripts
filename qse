@@ -1,0 +1,3 @@
+#!/bin/sh
+
+for i in $PATH;do ls $i;done | sort | fzf --tac | xargs -o -r sh -c
