@@ -8,6 +8,11 @@ Installation
 
 Just move every shell script to your **PATH**
 
+Requirements
+---
+fzy (can get replaced by fzf, dmenu or anything else by changing the scripts)
+Some basic shell programs
+
 Scripts
 ---
 
@@ -18,3 +23,6 @@ Basically a tiny ``neofetch`` that does not have any logos
 **QSe**
 
 Gets every program on your **PATH** and opens a menu that runs the selected program
+
+**QMan**
+Gets every manual with a short description and opens the selected manual
