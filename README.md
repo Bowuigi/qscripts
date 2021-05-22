@@ -25,4 +25,9 @@ Basically a tiny ``neofetch`` that does not have any logos
 Gets every program on your **PATH** and opens a menu that runs the selected program
 
 **QMan**
+
 Gets every manual with a short description and opens the selected manual
+
+**QOff**
+
+Opens a dmenu prompt used to shutdown, restart and poweroff the machine, intended to be used with DWM

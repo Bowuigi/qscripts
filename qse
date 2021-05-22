@@ -1,3 +1,5 @@
 #!/bin/sh
 
-for i in $PATH;do ls $i;done | sort | fzy -p "Run " | xargs -o -r sh -c
+cmd=$(echo $PATH | awk -F: 'END { for (i=1;i<NF;i++) {print $i} }')
+
+ls $cmd | sort | fzy -p "Run " | xargs -o -r sh -c

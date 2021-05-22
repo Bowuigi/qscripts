@@ -1,0 +1,25 @@
+#!/bin/sh
+# Logout, shutdown and restart in dmenu
+
+shutdown="Shutdown"
+restart="Restart"
+logout="Logout"
+cancel="Cancel"
+wm="dwm"
+
+options="$shutdown\n$restart\n$logout\n$cancel"
+
+# Uses default settings
+selected=$(echo $options | dmenu)
+
+case $selected in
+	$shutdown)
+		shutdown now
+		;;
+	$restart)
+		shutdown -r now
+		;;
+	$logout)
+		pkill $wm
+		;;
+esac
